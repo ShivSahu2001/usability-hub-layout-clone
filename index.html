@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media-queries.css">
 </head>
 <body>
     
@@ -23,7 +24,7 @@
                 <img src="./assets/asset 1.png" alt="company logo">
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links" >
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -33,6 +34,7 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -136,9 +138,9 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="second-big-feature">
             
-            <div class="feature-desc">
+            <div class="feature-desc" >
                 <h4 class="small-bold-text">Optimisation for</h4>
                 <h2>Marketers</h2>
                 <p>Fine-tune landing pages, messaging, and creative, helping you optimise conversion rates on marketing campaigns and product launches.</p>
@@ -266,5 +268,14 @@
     
 
     <script src="https://kit.fontawesome.com/1c875e7ced.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggeButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggeButton.addEventListener("click", () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>

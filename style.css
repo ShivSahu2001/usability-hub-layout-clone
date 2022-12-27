@@ -59,6 +59,7 @@ ul{
     max-width: 1180px;
     margin-inline: auto;
     padding-inline: var(--padding-inline-section);
+    overflow: hidden;
 }
 
 .flex{
@@ -84,6 +85,7 @@ ul{
     padding: 12px 24px;
     box-shadow: 0 0 2px var(--secondary-text-color);
     transition: 0.2s ease-out;
+    text-align: center;
 }
 
 .primary-button:hover{
@@ -123,6 +125,7 @@ ul{
 .main-nav{
     justify-content: space-between;
     margin-top: 20px;
+    position: relative;
 }
 
 .company-logo img{
@@ -136,6 +139,10 @@ ul{
 .nav-links ul {
     justify-content: end;
     gap: 40px;
+}
+
+.nav-toggle {
+    display: none;
 }
 
 /* header section */
@@ -162,7 +169,8 @@ header{
 }
 
 .header-right img{
-    width: 600px;
+    /* width: 600px; */
+    width: 100%;
 }
 
 /* companies header */
@@ -175,8 +183,9 @@ header{
 }
 
 .logos{
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo{
@@ -195,6 +204,7 @@ header{
 
 .features-header{
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .features-header h2{
@@ -205,7 +215,7 @@ header{
     flex-wrap: wrap;
     margin-top: 20px;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
 }
 
 .features-card img{
@@ -249,7 +259,7 @@ section{
 /* example section */
 
 .example-header{
-    /* text-align: center; */
+    text-align: center;
     flex-direction: column;
     gap: 20px;
 
@@ -266,12 +276,13 @@ section{
 .example-area{
     justify-content: space-between;
     margin-block: 30px;
+    flex-wrap: wrap;
 }
 
 .example-card{
     width: 23%;
     position: relative;
-    min-height: 300px;
+    height: 300px;
     background: black;
     border-radius: 5px;
     background: linear-gradient(rgb(0, 0, 0,0.1), rgb(0, 0, 0, 0.8) ),  url(./assets/asset\ 36.jpeg);
@@ -307,15 +318,16 @@ section{
 .cta-section{
 
     background-color: #183B54;
-    margin-top: 8%;
+    /* margin-top: 8%; */
     /* height: 40vh; */
-    padding: 100px var(--padding-inline-section) 50px;
+    padding: 120px var(--padding-inline-section) 60px;
 }
 
 .cta-section-container{
     flex-direction: column;
     gap: 40px;
     color: white;
+    text-align: center;
 }
 
 .cta-section-container p {
@@ -332,6 +344,7 @@ footer{
 .footer-container{
     align-items: flex-start;
     justify-content: space-between;
+    
 }
 
 .link-column{
@@ -352,6 +365,6 @@ footer{
 .sub-footer-container{
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
-
 
